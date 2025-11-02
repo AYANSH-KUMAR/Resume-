@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AYANSH KUMAR YADAV - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      background: url('1000040819.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #090e1b;
+    }
+    body.light-mode {
+      background: #fff !important;
+      color: #222;
+    }
+    header {
+      background: black;
+      color: #fff;
+      padding: 6px 0;
+      text-align: left;
+      font-size: 0.95em;
+      display: flex;
+      align-items: center;
+      justify-content:;
+    }
+    .toggle-mode-btn {
+      background: transparent;
+      border: none;
+      font-size: 2.3em;
+      cursor: pointer;
+      color: #fff;
+      margin-left: 900px;
+      margin-right: 0px;
+      vertical-align: middle;
+      transition: color 0.3s;
+    }
+    body.light-mode .toggle-mode-btn {
+      color: #222;
+    }
+    header .contact-info { margin-right: 24px; }
+    nav {
+      background: #1b1b1bcc;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 24px;
+      transition: 0.3s;
+    }
+    body.light-mode nav a {
+      color: #2328db !important;
+    }
+    nav a:hover {
+      background: #e33b56;
+      color: #fff;
+    }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      padding: 48px 0 36px 0;
+    }
+    .hero-text {
+      max-width: 420px;
+      margin-right:40px;
+    }
+    .plain-name {
+      font-size:2.6em;
+      font-weight:bold;
+      margin-bottom:0.2em;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+    body.light-mode .plain-name {
+      color: #222 !important;
+    }
+    .typewriter-text {
+      font-size:1.6em;
+      font-weight:700;
+      color: #fc5aff;
+      margin:0.2em 0 1em 0;
+    }
+    body.light-mode .typewriter-text {
+      color: #2328db !important;
+    }
+    .hero-text p { font-size:1.1em; margin-bottom:1.4em;}
+    .portfolio-btn {
+      background:black;
+      color:#fff;
+      padding: 12px 32px;
+      border:none;
+      border-radius:50px;
+      font-weight:600;
+      font-size:1em;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 0 8px #e33b56, 0 0 24px #e33b56bb;
+    }
+    body.light-mode .portfolio-btn {
+      background: #2328db !important;
+      color: #fff !important;
+    }
+    .hero-img {
+      display:flex;align-items:center;justify-content:center;
+    }
+    .hero-img img {
+      width:270px; height:270px; border-radius:50%; object-fit:cover;
+      border: 8px solid #111;
+      box-shadow: 0 0 36px 10px #00fff7, 0 0 64px 12px #fc5aff88;
+      background: #222;
+    }
+    body.light-mode .hero-img img {
+      border: 8px solid #2328db !important;
+    }
+    /* About Section */
+    .section {
+      background: black;
+      color:#222;
+      border-radius: 24px;
+      max-width:800px;
+      margin:36px auto;
+      padding:36px;
+      box-shadow:0 2px 12px #e33b5640;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+    body.light-mode .section {
+      background: #fff !important;
+      color: #222 !important;
+    }
+    .section-about-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .section-about-flex .about-img {
+      flex: 0 0 auto;
+      width: 110px;
+      height: 110px;
+      margin: 0;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 24px #00fff7bb,0 0 48px #fc5aff77;
+      border: 5px solid #222;
+    }
+    body.light-mode .about-img {
+      border: 5px solid #2328db !important;
+    }
+    .section-about-flex .about-content {
+      flex: 1 1 250px;
+      min-width: 180px;
+      max-width: 600px;
+    }
+    @media (max-width:600px){
+      .section-about-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .section-about-flex .about-content {
+        min-width: unset;
+        max-width: 100%;
+        margin-top: 18px;
+      }
+    }
+    .stylish-about-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fc5aff;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-shadow: 1px 2px 10px #2328db88;
+      animation: fadeInLeft 1.2s forwards;
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+    .stylish-about-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.15em;
+      font-weight: 700;
+      color: #222;
+      background: rgba(255,255,255,0.8);
+      margin-top: 8px;
+      padding: 11px 18px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px #2328db22;
+      animation: fadeInUp 1.3s forwards;
+      animation-delay: 0.3s;
+      opacity: 0;
+    }
+    body:not(.light-mode) .stylish-about-text {
+      background: rgba(30,30,40,0.99);
+      color: #fff;
+    }
+    .social {
+      margin-top:18px;
+    }
+    .social a { color:#fc5aff; margin-right:16px; font-size:1.25em; text-decoration:none; transition:0.2s;}
+    body.light-mode .social a { color: #2328db !important; }
+    .social a:hover { color:#00fff7; }
+    @media (max-width:800px){
+      .hero{ flex-direction:column;justify-content:center;align-items:center; }
+      .hero-text{margin-right:0;margin-bottom:24px;}
+      .hero-img img{width:180px;height:180px;}
+      .section{padding:24px;}
+    }
+
+    /* Contact Section Styles */
+   .section, .contact-section {
+  background: #15161B;
+  color: #fff;
+  border-radius: 22px;
+  max-width: 770px;
+  margin: 38px auto 0 auto;
+  padding: 26px 18px 32px 18px;
+  box-shadow: 0 0 24px 6px #2329ff22, 0 0 0 2px #fc5aff44 inset;
+  border: 1.5px solid #242647;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  display: block;
+}
+    .contact-flex {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .contact-form {
+      flex: 1 1 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width:220px; max-width:330px;
+    }
+    .contact-form label {
+      font-weight: 400;
+      color: #ccc; margin-bottom:-4px;
+      font-size: 1.07em;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #888;
+      padding: 10px 6px;
+      font-size: 1.07em;
+      color: #fff;
+      outline: none;
+      border-radius: 0;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-bottom: 2.5px solid #fc5aff;
+    }
+    .contact-btn {
+      margin-top: 18px;
+      padding: 13px 0;
+      background: linear-gradient(92deg,#ffefbb 10%,#f3a3ff 50%,#11d0ff 100%);
+      color: #222; font-weight:700; font-size: 1.09em;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      box-shadow: 0 0 9px #4ebcffc2, 0 0 11px #e66fff9c;
+      transition: transform 0.16s;
+    }
+    .contact-btn:hover { transform: scale(1.04);}
+    .contact-info {
+      flex: 1 1 320px;
+      padding-left: 10px; 
+      display: flex; flex-direction: column;
+      align-items: flex-start; justify-content: center;
+    }
+    .glass-contact {
+      font-family: 'Montserrat', serif;
+      font-size: 2.6em;
+      color: #f7f5ff;
+      letter-spacing: 2.5px;
+      font-weight: 900;
+      text-shadow: 2px 3px 8px #fc5affcc, 1px 2px 13px #11e5ff8d;
+    }
+    .glass-contact-underline {
+      display:inline-block; border-bottom:2.2px solid #fff; width: 60px; margin:0 20px; position: relative; top: -18px;
+    }
+    .contact-desc {
+      margin-top: 26px;
+      color: #dbdbeb; font-size: 1.08em; letter-spacing: 0.03em; word-break: break-word;
+      max-width: 320px;
+    }
+    @media (max-width: 800px){
+      .contact-flex { flex-direction:column; gap:24px;}
+      .contact-info, .contact-form { max-width:100%; }
+      .glass-contact { font-size:2em;}
+    }
+    /* 3D Animation Styles */
+    @keyframes fadeInUp {
+      from { transform: translateY(80px) scale(0.94); opacity: 0;}
+      to { transform: translateY(0) scale(1); opacity: 1;}
+    }
+    @keyframes fadeInLeft {
+      from { transform: translateX(-60px) scale(0.95); opacity: 0;}
+      to { transform: translateX(0) scale(1); opacity: 1;}
+    }
+    @keyframes fadeInRight {
+      from { transform: translateX(60px) scale(0.95); opacity: 0;}
+      to { transform: translateX(0) scale(1); opacity: 1;}
+    }
+    @keyframes fadeInZoom {
+      from { transform: scale(0.7); opacity: 0;}
+      to { transform: scale(1); opacity: 1;}
+    }
+    .animated-up { opacity:0; animation: fadeInUp 1s forwards; animation-delay: 0.2s;}
+    .animated-left { opacity:0; animation: fadeInLeft 1s forwards; animation-delay: 0.5s;}
+    .animated-right { opacity:0; animation: fadeInRight 1s forwards; animation-delay: 1.0s;}
+    .animated-zoom { opacity:0; animation: fadeInZoom 1.2s forwards; animation-delay: 1.2s;}
+    .animated-card { opacity:0; animation: fadeInUp 1s forwards; animation-delay: 0.2s;}
+  </style>
+</head>
+<body>
+<header>
+  <button class="toggle-mode-btn" id="toggle-mode-btn" aria-label="Toggle mode">
+    <i id="toggle-mode-icon" class="fas fa-moon"></i>
+  </button>
+  <!--<span class="contact-info">✉️ hitlerkasathi@gmail.com | ☎️ 9792222013</span>-->
+</header>
+<nav>
+  <a href="#" id="btn-home">Home</a>
+  <a href="#" id="btn-about">About</a>
+  <a href="#" id="btn-services">Services</a>
+  <a href="#" id="btn-contact">Contact</a>
+</nav>
+<div class="hero" id="hero-section">
+  <div class="hero-text animated-up">
+    <div class="plain-name animated-left">AYANSH KUMAR YADAV</div>
+    <div class="typewriter-text animated-left" id="typewriter"></div>
+    <p class="animated-up">Expert in developing Android mod apps, and cybersecurity tools. Enthusiastic about AI and automation.</p>
+    <button class="portfolio-btn animated-left">Portfolio</button>
+  </div>
+  <div class="hero-img animated-zoom">
+    <img src="c.jpg" alt="Your photo" />
+  </div>
+</div>
+<div class="section animated-card" id="about-section" style="display:none;">
+  <div class="section-about-flex">
+    <img src="f.jpg" alt="About photo" class="about-img" />
+    <div class="about-content">
+      <div class="stylish-about-title">About Me</div>
+      <div class="stylish-about-text">
+        My name is Ayansh Kumar Yadav. I am an engineer in computer science and also pursuing a polytechnic degree. I am originally from Lucknow, Uttar Pradesh. I have a deep interest in computer science and am committed to developing my skills in this field.
+      </div>
+      <div class="social">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact section with animation -->
+<div class="contact-section animated-card" id="contact-section" style="display:none;">
+  <div class="contact-flex">
+    <form class="contact-form animated-left" autocomplete="off">
+      <label>Your Name</label>
+      <input type="text" placeholder="Enter your name" required />
+      <label>Your Email</label>
+      <input type="email" placeholder="Enter your email" required />
+      <label>Share your thoughts</label>
+      <textarea rows="3" placeholder="Your message..."></textarea>
+      <button type="submit" class="contact-btn">SHARE YOUR FEEDBACK</button>
+    </form>
+    <div class="contact-info animated-up">
+      <h2>
+        <span class="glass-contact">Contact</span>
+        <span class="glass-contact-underline"></span>
+        <br>
+        <span class="glass-contact">Us</span>
+      </h2>
+      <p class="contact-desc">
+        It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you. Shoot!
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+const words = ["ETHICAL HACKER", "ANDROID MOD APK DEVELOPER ", "PYTHON PROGRAMMER", "CYBERSECURITY LEARNER", "AI ENTHUSIAST"];
+let part = 0;
+let partIndex = 0;
+const element = document.getElementById("typewriter");
+function typeWriter() {
+  let text = words[part].substring(0, partIndex + 1);
+  element.textContent = text;
+  if (text === words[part]) {
+    setTimeout(eraseWriter, 1200);
+  } else {
+    partIndex++;
+    setTimeout(typeWriter, 100);
+  }
+}
+function eraseWriter() {
+  let text = words[part].substring(0, partIndex - 1);
+  element.textContent = text;
+  if (text === "") {
+    part = (part + 1) % words.length;
+    partIndex = 0;
+    setTimeout(typeWriter, 200);
+  } else {
+    partIndex--;
+    setTimeout(eraseWriter, 60);
+  }
+}
+window.onload = typeWriter;
+
+// SPA Nav Logic:
+const aboutBtn = document.getElementById('btn-about');
+const aboutSection = document.getElementById('about-section');
+const heroSection = document.getElementById('hero-section');
+const contactBtn = document.getElementById('btn-contact');
+const contactSection = document.getElementById('contact-section');
+
+aboutBtn.onclick = function(e) {
+  e.preventDefault();
+  aboutSection.style.display = "block";
+  contactSection.style.display = "none";
+  if(heroSection) heroSection.style.display = "none";
+};
+contactBtn.onclick = function(e){
+  e.preventDefault();
+  contactSection.style.display = "block";
+  aboutSection.style.display = "none";
+  if(heroSection) heroSection.style.display = "none";
+};
+const homeBtn = document.getElementById('btn-home');
+homeBtn.onclick = function(e) {
+  e.preventDefault();
+  aboutSection.style.display = "none";
+  contactSection.style.display = "none";
+  heroSection.style.display = "flex";
+};
+
+const toggleBtn = document.getElementById("toggle-mode-btn");
+const modeIcon = document.getElementById("toggle-mode-icon");
+toggleBtn.onclick = function() {
+  document.body.classList.toggle("light-mode");
+  if(document.body.classList.contains("light-mode")){
+    modeIcon.classList.remove("fa-moon");
+    modeIcon.classList.add("fa-sun");
+  } else {
+    modeIcon.classList.remove("fa-sun");
+    modeIcon.classList.add("fa-moon");
+  }
+};
+</script>
+</body>
+</html>
